@@ -10,8 +10,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install lizard
-      run: pip install lizard
-
-    - name: Limit complexity
-      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 5
+    - name: all entries made
+      run: bash ./.github/workflows/check-complete.sh
