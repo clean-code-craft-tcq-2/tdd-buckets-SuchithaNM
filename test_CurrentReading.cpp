@@ -6,5 +6,5 @@
 TEST_CASE("Case for detecting number of continuous range in the given reading:Failing") {
   int ChargingCurrentReadings[] = {3, 3, 4, 5};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
+  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 0);
 }
