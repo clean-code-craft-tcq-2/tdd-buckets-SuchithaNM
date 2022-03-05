@@ -11,10 +11,6 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
         {
             count++;
         }
-        else
-        {
-            count = 0;
-        }
     }
     return count;
 }
