@@ -8,4 +8,4 @@ typedef struct{
 	int NumOfReadingsInRange;
 }RangeReading;
 
-int NumberofContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings);
+extern int NumberofContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings);
