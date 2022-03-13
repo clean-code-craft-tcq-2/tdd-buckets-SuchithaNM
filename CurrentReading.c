@@ -53,3 +53,15 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
     }
     return count;
 }
+
+RangeReading printFunction( int min, int max, int numberInRange);
+{
+	RangeReading rangeReading;
+	rangeReading.StartIndex=min;
+	rangeReading.EndIndex= max;
+	rangeReading.NumOfReadingsInRange= numberInRange;
+	printf("The number of readings in the range %d - %d is %d",  min, max , numberInRange);
+	 
+	return rangeReading;
+}
+
