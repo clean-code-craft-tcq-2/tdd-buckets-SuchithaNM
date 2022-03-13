@@ -13,4 +13,5 @@ typedef struct{
 extern int NumberofContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings);
 extern bool validateInputSequence(int *InputSequence , int length);
 extern void sortInputSeq(int *InputSequence , int length);
+RangeReading printFunction( int min, int max, int numberInRange);
 
