@@ -25,14 +25,12 @@ TEST_CASE("Case for checking the given array in the ascending order") {
 
 TEST_CASE("Case for checking the given array to print on console") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
+  int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   int expectedStartIndex = 3, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 4;
   RangeReading currentReading;
-  currentReading.StartIndex = expectedStartIndex;
-  currentReading.EndIndex = expectedEndIndex;
-  currentReading.NumOfReadingsInRange = expectedNumOfReadingsInRange;
-  int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-  REQUIRE(printFunction(expectedStartIndex,expectedEndIndex, expectedNumOfReadingsInRange) == currentReading);
+  REQUIRE(currentReading.StartIndex == expectedStartIndex);
+  REQUIRE(currentReading.EndIndex == expectedEndIndex);
+  REQUIRE(currentReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
 }
 
 
