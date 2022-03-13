@@ -11,7 +11,7 @@ TEST_CASE("Case for detecting number of continuous range in the given reading:Fa
 }
 
 TEST_CASE("Case for checking the given array is invalid with Negative numbers") {
-  int ChargingCurrentReadings[] = {3, 3 ,5, -1, -3, 11, 12};
+  int ChargingCurrentReadings[] = {-3, 3 ,-5, -4, -3, 11, 12};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == false);
 }
