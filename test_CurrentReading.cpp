@@ -32,6 +32,6 @@ TEST_CASE("Case for checking the given array to print on console") {
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
   REQUIRE(printFunction(expectedStartIndex,expectedEndIndex, expectedNumOfReadingsInRange) == currentReading);
-}
-*/
+}*/
+
 
