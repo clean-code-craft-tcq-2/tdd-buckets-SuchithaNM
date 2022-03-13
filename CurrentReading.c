@@ -44,16 +44,14 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
     {
 	    for(i = 0; i < numOfCCReadings; i++)
 	    {
-		for(j = i+1; j < numOfCCReadings; j++)
+		curRead = (ChargingCurrentReadings[i+1] -  ChargingCurrentReadings[i]);
+		if(curRead > 1)
 		{
-			curRead = (ChargingCurrentReadings[j] -  ChargingCurrentReadings[i]);
-			if((curRead == 0) || (curRead == 1))
-			{
-				count++;
-			}
+			count++;
 		}
+		return count;
 	    }
-	     return count;
+	   
     }
 }
 
