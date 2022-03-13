@@ -40,14 +40,16 @@ void sortInputSeq(int *InputSequence , int length)
 int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 {
     int i,curRead;
-    if(validateInputSequence(ChargingCurrentReadings, numOfCCReadings) == TRUE)
-    for(i=0;i<numOfCCReadings;i++)
+    if(validateInputSequence(ChargingCurrentReadings, numOfCCReadings) == true)
     {
-        curRead = (ChargingCurrentReadings[i+1] -  ChargingCurrentReadings[i]);
-        if((curRead == 0) || (curRead == 1))
-        {
-            count++;
-        }
+	    for(i=0;i<numOfCCReadings;i++)
+	    {
+		curRead = (ChargingCurrentReadings[i+1] -  ChargingCurrentReadings[i]);
+		if((curRead == 0) || (curRead == 1))
+		{
+		    count++;
+		}
+	    }
     }
     return count;
 }
