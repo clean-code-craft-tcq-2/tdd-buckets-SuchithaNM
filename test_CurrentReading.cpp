@@ -26,9 +26,9 @@ TEST_CASE("Case for checking the given array in the ascending order") {
 TEST_CASE("Case for checking the given array to print on console") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   RangeReading currentReading;
-  currentReading expectedStartIndex = 3;
-  currentReading expectedEndIndex = 5;
-  currentReading expectedNumOfReadingsInRange = 4
+  currentReading.expectedStartIndex = 3;
+  currentReading.expectedEndIndex = 5;
+  currentReading.expectedNumOfReadingsInRange = 4
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
   REQUIRE(printFunction(expectedStartIndex,expectedEndIndex, expectedNumOfReadingsInRange) == currentReading);
