@@ -47,11 +47,10 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 		curRead = (ChargingCurrentReadings[i+1] -  ChargingCurrentReadings[i]);
 		if((curRead == 0) || (curRead == 1))
 		{
-		    count++;
+		    return count++;
 		}
 	    }
     }
-    return count;
 }
 
 RangeReading printFunction( int min, int max, int numberInRange)
