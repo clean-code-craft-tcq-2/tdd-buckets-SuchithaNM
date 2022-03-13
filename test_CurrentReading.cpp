@@ -20,7 +20,7 @@ TEST_CASE("Case for checking the given array is continuous and arraged in the as
   int ChargingCurrentReadings[] = {3, 3 ,5, 4, 11, 10, 12};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 2);
+  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 7);
 }
 
 
