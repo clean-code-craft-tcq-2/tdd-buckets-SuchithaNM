@@ -22,7 +22,7 @@ TEST_CASE("Case for checking the given array in the ascending order") {
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
   REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
 }
-
+/*
 TEST_CASE("Case for checking the given array to print on console") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   RangeReading currentReading;
@@ -33,5 +33,5 @@ TEST_CASE("Case for checking the given array to print on console") {
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
   REQUIRE(printFunction(expectedStartIndex,expectedEndIndex, expectedNumOfReadingsInRange) == currentReading);
 }
-
+*/
 
