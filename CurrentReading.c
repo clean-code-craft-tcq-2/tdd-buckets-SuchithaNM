@@ -54,7 +54,7 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
     return count;
 }
 
-RangeReading printFunction( int min, int max, int numberInRange);
+RangeReading printFunction( int min, int max, int numberInRange)
 {
 	RangeReading rangeReading;
 	rangeReading.StartIndex=min;
