@@ -11,10 +11,12 @@ bool validateInputSequence(int *InputSequence , int length)
 		if(InputSequence[i] >= 0)
 		{
 			sortInputSeq(InputSequence, length);			
-			return TRUE;
+			return true;
 		}	
 		else
-			return FALSE;
+		{
+			return false;
+		}
 	}
 
 }
