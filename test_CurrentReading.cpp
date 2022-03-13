@@ -16,12 +16,22 @@ TEST_CASE("Case for checking the given array is invalid with Negative numbers") 
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == false);
 }
 
-TEST_CASE("Case for checking the given array is continuous and arraged in the ascending oder") {
-  int ChargingCurrentReadings[] = {3, 3 ,5, 4, 11, 10, 12};
+TEST_CASE("Case for checking the given array in the ascending order") {
+  int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 7);
+  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
 }
 
+TEST_CASE("Case for checking the given array to print on console") {
+  int ChargingCurrentReadings[] = {3, 3 ,5, 4};
+  RangeReading currentReading;
+  currentReading expectedStartIndex = 3;
+  currentReading expectedEndIndex = 5;
+  currentReading expectedNumOfReadingsInRange = 4
+  int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
+  REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
+  REQUIRE(printFunction(expectedStartIndex,expectedEndIndex, expectedNumOfReadingsInRange) == currentReading);
+}
 
 
