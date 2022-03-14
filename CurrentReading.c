@@ -47,9 +47,9 @@ int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 		curRead = (ChargingCurrentReadings[i+1] -  ChargingCurrentReadings[i]);
 		if(curRead > 1)
 		{
-			count++;
+			break;
 		}
-		
+		count++;
 	    }
 	   return count;
     }
