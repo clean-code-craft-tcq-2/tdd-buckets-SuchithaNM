@@ -20,17 +20,18 @@ TEST_CASE("Case for checking the given array in the ascending order") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-  //REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
+  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
 }
-/*
+
 TEST_CASE("Case for checking the given array to print on console") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   int expectedStartIndex = 3, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 4;
-  RangeReading currentReading;
- // REQUIRE(currentReading.StartIndex == expectedStartIndex);
-  REQUIRE(currentReading.EndIndex == expectedEndIndex);
-  REQUIRE(currentReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
-}*/
+  RangeReading rangeReading;
+  rangeReading = printFunction(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange );
+  REQUIRE(rangeReading.StartIndex == expectedStartIndex);
+  REQUIRE(rangeReading.EndIndex == expectedEndIndex);
+  REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
+}
 
 
