@@ -52,7 +52,7 @@ Start Test-driven approach
 3. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
 
-# APPROACH
+## APPROACH
 
 1. Taking the input sequence array of current samples.
 2. Validating the Input current samples whether any Negative Current samples are present or not.
