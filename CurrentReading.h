@@ -11,7 +11,7 @@ typedef struct{
 }RangeReading;
 
 extern int NumberofContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings);
-extern bool validateInputSequence(int *InputSequence , int length);
+extern bool validateCurrentReadingInputSequence(int *InputSequence , int length);
 extern void sortInputSeq(int *InputSequence , int length);
-RangeReading printFunction( int min, int max, int numberInRange);
+RangeReading detectCurrentReadingAndPrintCSVFormat( int min, int max, int numberInRange);
 
