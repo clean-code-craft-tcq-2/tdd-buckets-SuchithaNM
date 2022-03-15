@@ -1,7 +1,7 @@
 #include "CurrentReading.h"
 int NumberofContRange = 0;
 
-int count = 0;
+int count = 1;
 
 bool validateCurrentReadingInputSequence(int *InputSequence , int length)
 {
