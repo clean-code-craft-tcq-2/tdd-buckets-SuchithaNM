@@ -61,7 +61,7 @@ RangeReading detectCurrentReadingAndPrintCSVFormat( int min, int max, int number
 	rangeReading.StartIndex=min;
 	rangeReading.EndIndex= max;
 	rangeReading.NumOfReadingsInRange= numberInRange;
-	printf(" %d - %d , %d",  min, max , numberInRange);
+	printf(" %d - %d , %d\n",  min, max , numberInRange);
 	 
 	return rangeReading;
 }
