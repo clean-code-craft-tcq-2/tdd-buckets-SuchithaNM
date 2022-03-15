@@ -39,8 +39,8 @@ Range, Readings
 
 Establish quality parameters: 
 
-- What is the maximum complexity (CCN) per function?  CCN 5 and create corresponding yml in the `.github/workflows` folder
-- How many lines of duplicate code will you tolerate?  the number of lines is 3 and create corresponding yml in the `.github/workflows` folder
+- What is the maximum complexity (CCN) per function? CCN limit is 5
+- How many lines of duplicate code will you tolerate?  the number of lines is 3 
 - Ensure 100% line and branch coverage at every step. Include the coverage yml in the workflows.
 
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
@@ -48,5 +48,15 @@ Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 Start Test-driven approach
 
 1. Write the smallest possible failing test: give input `4,5`. assert output to be `4-5, 2`.
-1. Write the minimum amount of code that'll make it pass.
-1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+2. Write the minimum amount of code that'll make it pass.
+3. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+
+
+# APPROACH
+
+1. Taking the input sequence array of current samples.
+2. Validating the Input current samples whether any Negative Current samples are present or not.
+3. If the input current sequence is valid the sort the given current samples.
+4. Checking whenther difference between current and previous samples value is either 1 or 0 .
+5. detect the range and print current reading samples range and readings in the CSV format .6. 
+
