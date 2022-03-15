@@ -6,21 +6,21 @@
 TEST_CASE("Case for detecting number of continuous range in the given reading:Failing") {
   int ChargingCurrentReadings[] = {4,5};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
+  REQUIRE(validateCurrentReadingInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
   REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 2);
 }
 
 TEST_CASE("Case for checking the given array is invalid with Negative numbers") {
   int ChargingCurrentReadings[] = {-3, 3 ,-5, -4, -3, 11, 12};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == false);
+  REQUIRE(validateCurrentReadingInputSequence(ChargingCurrentReadings,numOfCCReadings) == false);
 }
 
 TEST_CASE("Case for checking the given array in the ascending order") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  REQUIRE(validateInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-//   REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 4);
+  REQUIRE(validateCurrentReadingInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
+
 }
 
 TEST_CASE("Case for checking the given array to print on console") {
@@ -28,7 +28,7 @@ TEST_CASE("Case for checking the given array to print on console") {
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   int expectedStartIndex = 3, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 4;
   RangeReading rangeReading;
-  rangeReading = printFunction(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange );
+  rangeReading = detectCurrentReadingAndPrintCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange );
   REQUIRE(rangeReading.StartIndex == expectedStartIndex);
   REQUIRE(rangeReading.EndIndex == expectedEndIndex);
   REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
