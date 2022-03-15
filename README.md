@@ -58,5 +58,5 @@ Start Test-driven approach
 2. Validating the Input current samples whether any Negative Current samples are present or not.
 3. If the input current sequence is valid the sort the given current samples.
 4. Checking whenther difference between current and previous samples value is either 1 or 0 .
-5. detect the range and print current reading samples range and readings in the CSV format .6. 
+5. detect the range and print current reading samples range and readings in the CSV format .
 
