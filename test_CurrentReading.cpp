@@ -3,11 +3,11 @@
 #include "test/catch.hpp"
 #include "CurrentReading.h"
 
-TEST_CASE("Case for detecting number of continuous range in the given reading:Failing") {
+TEST_CASE("Case for validate current reading input sequence and find the continuous range") {
   int ChargingCurrentReadings[] = {4,5};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   REQUIRE(validateCurrentReadingInputSequence(ChargingCurrentReadings,numOfCCReadings) == true);
-  REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 2);
+  REQUIRE(numberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 2);
 }
 
 TEST_CASE("Case for checking the given array is invalid with Negative numbers") {
