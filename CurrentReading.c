@@ -37,7 +37,7 @@ void sortInputSeq(int *InputSequence , int length)
 	}
 }
 
-int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
+int numberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 {
     int i, j, curRead;
     if(validateCurrentReadingInputSequence(ChargingCurrentReadings, numOfCCReadings) == true)
