@@ -23,7 +23,7 @@ TEST_CASE("Case for checking the given array in the ascending order") {
 
 }
 
-TEST_CASE("Case for checking the given array to print on console") {
+TEST_CASE("Case checks the given current reading for csv format construction") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   int expectedStartIndex = 3, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 4;
