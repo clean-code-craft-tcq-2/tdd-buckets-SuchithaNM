@@ -34,4 +34,22 @@ TEST_CASE("Case checks the given current reading for csv format construction") {
   REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
 }
 
+TEST_CASE("Checks for the current values for given ADC values from the array") {
+	
+	int ADCValues[] = {64, 512, 1140, 1220, 1560, 2048,4094};
+
+	int numberOfSamples = sizeof(ADCValues) / sizeof(ADCValues[0]);
+
+	int expectedCurrentSenseValues[] = {0, 1, 2, 3, 4, 5, 10};
+	
+	int ADC_Resolution = 12;
+	int maxCurrentValue = 10;
+	
+	int currentSenseValues[numberOfSamples];
+	
+	ChargingCurrentSenseValue(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue, currentSenseValues);
+	for(size_t i=0; i<numberOfSamples; i++) {
+		 REQUIRE(currentSenseValues[i] == expectedCurrentSenseValues[i]);
+	}
+}
 
