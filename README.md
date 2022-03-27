@@ -60,3 +60,12 @@ Start Test-driven approach
 4. Checking whenther difference between current and previous sample values are either 1 or 0 .
 5. detect the range and print current reading samples in the CSV format .
 
+# Test-driven extensions 
+  Test driven extentions added the previous resposiptory with different .c and .h file created .
+  it follows the following methods :
+  1.  Test driven development
+  2.  Test driven integration
+
+## Approach
+1. ignoring error-readings
+2. converting the 12-bit input into Amps. Round-off the result to the nearest integer
