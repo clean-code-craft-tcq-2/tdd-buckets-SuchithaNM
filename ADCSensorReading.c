@@ -14,7 +14,7 @@ void currentSenseAtoDConversion(int ADCValues[], int numberOfSamples, int ADC_Re
 {	
 	float currentValue, analogToDigitalCoversionValue;
 	
-	for (int i=0; i<numberOfSamples; i++)
+	for (int i=0; i< numberOfSamples; i++)
 	{
 		analogToDigitalCoversionValue = (ADCValues[i]) / (maxAnalogToDigitalConversion(ADC_Resolution));
 		currentValue = (maxCurrentValue * analogToDigitalCoversionValue) / (maxAnalogToDigitalConversion(ADC_Resolution));
@@ -31,13 +31,16 @@ void ignoreError(void)
 
 void ChargingCurrentSenseValue(int ADCValues[], int numberOfSamples, int ADC_Resolution, int maxCurrentValue, int* currentSenseValues)
 {
-	if((maxAnalogToDigitalConversion(ADC_Resolution)) < (stdAnalogToDigitalConvertedValue(ADC_Resolution)))
+	for (int i=0; i< numberOfSamples; i++)
 	{
-		currentSenseAtoDConversion(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue,currentSenseValues);
-	}
-	else
-	{
-		ignoreError();	
+		if(ADCValues[i] < (stdAnalogToDigitalConvertedValue(ADC_Resolution)))
+		{
+			currentSenseAtoDConversion(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue,currentSenseValues);
+		}
+		else
+		{
+			ignoreError();	
+		}
 	}
 	
 }
