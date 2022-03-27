@@ -55,13 +55,12 @@ TEST_CASE("Checks for the ignore the error when given ADC value is 4095") {
 	
 	int ADCValues[] = {4095};
 	int numberOfSamples = sizeof(ADCValues) / sizeof(ADCValues[0]);
-	int expectedCurrentSenseValues[] = {};
 	int ADC_Resolution = 12;
 	int maxCurrentValue = 10;
 	int currentSenseValues[numberOfSamples];
 	int expectedADC_Resolution = 12, expectedmaxCurrentValue = 10 , expectednumberOfSamples = 1;
 	
-	ChargingCurrentSenseValue(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue, currentSenseValues)
+	ChargingCurrentSenseValue(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue, currentSenseValues);
 	REQUIRE(ADC_Resolution == expectedADC_Resolution);
   	REQUIRE(maxCurrentValue == expectedmaxCurrentValue);
   	REQUIRE(numberOfSamples == expectednumberOfSamples);
