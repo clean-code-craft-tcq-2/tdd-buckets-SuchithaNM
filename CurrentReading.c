@@ -65,7 +65,7 @@ RangeReading detectCurrentReadingAndFormatOutputInCSVFormat( int min, int max, i
 	printOutputInCSV(ChargingCurrentReadings);
 	return rangeReading;
 }
-void printOutputInCSV(char * ChargingCurrentReadings,int numberInRange)
+void printOutputInCSV(char * ChargingCurrentReadings)
 {
 	printf("%s\n", ChargingCurrentReadings);
 }
