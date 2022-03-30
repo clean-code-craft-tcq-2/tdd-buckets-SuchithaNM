@@ -61,10 +61,11 @@ RangeReading detectCurrentReadingAndFormatOutputInCSVFormat( int min, int max, i
 	rangeReading.StartIndex=min;
 	rangeReading.EndIndex= max;
 	rangeReading.NumOfReadingsInRange= numberInRange;
-	sprintf(ChargingCurrentReadings, " %d - %d , %d\n",  min, max , numberInRange); 
+	sprintf(ChargingCurrentReadings, " %d - %d , %d",  min, max , numberInRange); 
+	printOutputInCSV(ChargingCurrentReadings);
 	return rangeReading;
 }
-void printOutputInCSV(char * ChargingCurrentReadings, int numberInRange)
+void printOutputInCSV(char * ChargingCurrentReadings,int numberInRange)
 {
 	printf("%s\n", ChargingCurrentReadings);
 }
