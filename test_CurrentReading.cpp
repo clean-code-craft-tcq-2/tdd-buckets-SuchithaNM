@@ -35,7 +35,6 @@ TEST_CASE("Case checks the given current reading for csv format construction") {
   REQUIRE(rangeReading.StartIndex == expectedStartIndex);
   REQUIRE(rangeReading.EndIndex == expectedEndIndex);
   REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
- // REQUIRE(CurrentReading == expectedCurrentReading);
 
 }
 
@@ -47,12 +46,14 @@ TEST_CASE("Checks for the current values for given ADC values from the array") {
 	int ADC_Resolution = 12;
 	int maxCurrentValue = 10;
 	int currentSenseValues[numberOfSamples];
-	
+	int expectedStartIndex = 0, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 6;
+	RangeReading rangeReading;
 	ChargingCurrentSenseValue(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue, currentSenseValues);
-	/*for(int i=0; i < numberOfSamples; i++)
-	{
-		 REQUIRE(currentSenseValues[i] == expectedCurrentSenseValues[i]);
-	}*/
+	 rangeReading = detectCurrentReadingAndFormatOutputInCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange);
+ 	 REQUIRE(rangeReading.StartIndex == expectedStartIndex);
+ 	 REQUIRE(rangeReading.EndIndex == expectedEndIndex);
+ 	 REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
+
 }
 
 TEST_CASE("Checks for the ignore the error when given ADC value is 4095") {
