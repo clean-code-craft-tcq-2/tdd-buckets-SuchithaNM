@@ -31,7 +31,7 @@ TEST_CASE("Case checks the given current reading for csv format construction") {
   char *CurrentReading ;
   char *expectedCurrentReading = "3-5,4" ; 
   RangeReading rangeReading;
-  rangeReading = detectCurrentReadingAndFormatOutputInCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange,CurrentReading );
+  rangeReading = detectCurrentReadingAndFormatOutputInCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange);
   REQUIRE(rangeReading.StartIndex == expectedStartIndex);
   REQUIRE(rangeReading.EndIndex == expectedEndIndex);
   REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
