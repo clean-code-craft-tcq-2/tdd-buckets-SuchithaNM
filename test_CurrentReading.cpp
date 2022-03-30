@@ -28,8 +28,9 @@ TEST_CASE("Case checks the given current reading for csv format construction") {
   int ChargingCurrentReadings[] = {3, 3 ,5, 4};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
   int expectedStartIndex = 3, expectedEndIndex = 5 , expectedNumOfReadingsInRange = 4;
+  char * expectedCurrentReading = "3-5,4";
   RangeReading rangeReading;
-  rangeReading = detectCurrentReadingAndPrintCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange );
+  rangeReading = detectCurrentReadingAndFormatOutputInCSVFormat(expectedStartIndex,expectedEndIndex,expectedNumOfReadingsInRange,expectedCurrentReading );
   REQUIRE(rangeReading.StartIndex == expectedStartIndex);
   REQUIRE(rangeReading.EndIndex == expectedEndIndex);
   REQUIRE(rangeReading.NumOfReadingsInRange == expectedNumOfReadingsInRange);
