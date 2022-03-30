@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#define formatBool(b) ((b) ? "TRUE" : "FALSE")
+
 
 typedef struct{
 	int StartIndex;
@@ -14,5 +14,5 @@ extern int numberofContinuousRange( int *ChargingCurrentReadings, int numOfCCRea
 extern bool validateCurrentReadingInputSequence(int *InputSequence , int length);
 extern void sortInputSeq(int *InputSequence , int length);
 RangeReading detectCurrentReadingAndFormatOutputInCSVFormat( int min, int max, int numberInRange);
-void printOutputInCSV(char * ChargingCurrentReadings);
+void printOutputInCSV(char  ChargingCurrentReadings);
 
