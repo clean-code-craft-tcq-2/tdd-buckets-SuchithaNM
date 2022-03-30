@@ -58,7 +58,7 @@ int numberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 RangeReading detectCurrentReadingAndFormatOutputInCSVFormat( int min, int max, int numberInRange)
 {
 	RangeReading rangeReading;
-	char* ChargingCurrentReadings;
+	char ChargingCurrentReadings;
 	rangeReading.StartIndex=min;
 	rangeReading.EndIndex= max;
 	rangeReading.NumOfReadingsInRange= numberInRange;
@@ -66,7 +66,7 @@ RangeReading detectCurrentReadingAndFormatOutputInCSVFormat( int min, int max, i
 	printOutputInCSV(ChargingCurrentReadings);
 	return rangeReading;
 }
-void printOutputInCSV(char * ChargingCurrentReadings)
+void printOutputInCSV(char  ChargingCurrentReadings)
 {
 	printf("%s\n", ChargingCurrentReadings);
 }
