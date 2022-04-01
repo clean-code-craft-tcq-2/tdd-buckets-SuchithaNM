@@ -5,11 +5,6 @@ int maxAnalogToDigitalConversion(int ADC_Resolution)
 	return (pow(2,ADC_Resolution) - 2);
 }
 
-int stdAnalogToDigitalConvertedValue(int ADC_Resolution)
-{
-	return (pow(2,ADC_Resolution) - 1);
-}
-
 void currentSenseAtoDConversion(int ADCValues[], int numberOfSamples, int ADC_Resolution, int maxCurrentValue, int* currentConversionValues)
 {	
 	float currentValue, analogToDigitalCoversionValue;
@@ -24,22 +19,15 @@ void currentSenseAtoDConversion(int ADCValues[], int numberOfSamples, int ADC_Re
 	}	
 }
 
-void ignoreError(void)
-{
-	printf("Ignore the error\n");
-}
-
 void ChargingCurrentSenseValue(int ADCValues[], int numberOfSamples, int ADC_Resolution, int maxCurrentValue, int* currentSenseValues)
 {
+	int errorValue;
+	errorValue = (pow(2,ADC_Resolution) - 1);
 	for (int i=0; i< numberOfSamples; i++)
 	{
-		if(ADCValues[i] < (stdAnalogToDigitalConvertedValue(ADC_Resolution)))
+		if(ADCValues[i] != errorValue))
 		{
 			currentSenseAtoDConversion(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue,currentSenseValues);
-		}
-		else
-		{
-			ignoreError();	
 		}
 	}
 	
