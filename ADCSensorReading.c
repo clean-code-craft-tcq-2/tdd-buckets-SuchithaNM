@@ -25,7 +25,7 @@ void ChargingCurrentSenseValue(int ADCValues[], int numberOfSamples, int ADC_Res
 	errorValue = (pow(2,ADC_Resolution) - 1);
 	for (int i=0; i< numberOfSamples; i++)
 	{
-		if(ADCValues[i] != errorValue))
+		if(ADCValues[i] != errorValue)
 		{
 			currentSenseAtoDConversion(ADCValues, numberOfSamples, ADC_Resolution, maxCurrentValue,currentSenseValues);
 		}
